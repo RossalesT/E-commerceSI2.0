@@ -1,0 +1,33 @@
+{
+    "produtos":[  
+       {
+          "nome":"Fone Quentucho",
+          "preco":"R$ 20,00",
+          "avista": "Á vista no PIX",
+          "parcelado": "ou em até 12x de 35,84",
+          "foto":"7one.png"
+       },
+       {
+         "nome":"Steelseries Artics 3",
+         "preco":"R$ 200,00",
+         "avista": "Á vista no PIX",
+         "parcelado": "ou em até 12x de 35,84",
+         "foto":"fone.png"
+      },
+      {
+         "nome":"Fone Quentucho",
+         "preco":"R$ 20,00",
+         "avista": "Á vista no PIX",
+         "parcelado": "ou em até 12x de 35,84",
+         "foto":"foofreezer.png"
+      },
+      {
+         "nome":"Fone Quentucho",
+         "preco":"R$ 20,00",
+         "avista": "Á vista no PIX",
+         "parcelado": "ou em até 12x de 35,84",
+         "foto":"foofreezer.png"
+      }
+      
+    ]
+ }
