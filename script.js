@@ -1,12 +1,9 @@
-
-
-
 let imgFoto       = document.querySelector('#foto')
 let nomeProduto          = document.querySelector('#nome-produto')
 let precoProduto          = document.querySelector('#preco-produto')
 let avistaProduto          = document.querySelector('#avista')
 let parceladoProduto          = document.querySelector('#parcelado')
-let btnComprar         = document.querySelector('#comprar')
+let botaoLink = document.querySelector('#botao-link')
 
 
 
@@ -30,35 +27,27 @@ function pegarDados(i) {
     })
 } 
 
-function atribuirDados(dados, i) {
-    imgFoto.setAttribute('src', 'Produtos/' + dados.produtos[i].foto)
-    nomeProduto.textContent          = dados.produtos[i].nome
-    precoProduto.textContent          = dados.produtos[i].preco
-    avista.textContent          = dados.produtos[i].avista
-    parcelado.textContent          = dados.produtos[i].parcelado
-
-}
-
 
 let imgsFoto = document.getElementsByClassName('foto')
 let nomesProdutos         = document.getElementsByClassName('nome-produto')
 let precosProdutos = document.getElementsByClassName('preco-produto')
 let avistaProdutos         = document.getElementsByClassName('avista')
 let parceladoProdutos         = document.getElementsByClassName('parcelado')
-let btnCompras = document.getElementsByClassName('comprar')
+let botaoLinks = document.getElementsByClassName('botao-link')
 let espacoProduto = document.getElementsByClassName('espaco')
+
 
 function atribuirDados2(dados, i) {
     imgsFoto[i].setAttribute('src', "produtos/"+dados.produtos[i].foto)
     nomesProdutos[i].textContent         = dados.produtos[i].nome
-    precosProdutos[i].textContent = dados.produtos[i].preco
+    precosProdutos[i].textContent = "R$ " + dados.produtos[i].preco
     avistaProdutos[i].textContent         = dados.produtos[i].avista
     parceladoProdutos[i].textContent          = dados.produtos[i].parcelado
-    btnCompras[i].textContent = 'Comprar'
-
+    botaoLinks[i].setAttribute('href',"paginas/" + dados.produtos[i].link)
+    botaoLinks[i].textContent = 'Comprar'
 }
 
-
+    
 function desenharCarta(id) {
 
     let carta = document.createElement("div")
@@ -92,18 +81,24 @@ function desenharCarta(id) {
     parcelado_produto.setAttribute('class', 'parcelado')
     carta.appendChild(parcelado_produto)
     
-    let botao_compra = document.createElement("button")
-    botao_compra.setAttribute('class', 'comprar')
-    carta.appendChild(botao_compra)
+    let link_compra = document.createElement("a")
+    link_compra.setAttribute('class', 'botao-link')
+    carta.appendChild(link_compra)
+
 
 
     pegarDados(id)
 }
 
+if(localStorage.getItem('produtos') == null){
+    localStorage.setItem('produtos', JSON.stringify([]));
+  }
+  
 
+
+
+  
 pegarDados(0)
-
-
 desenharCarta(1)
 desenharCarta(2)
 desenharCarta(3)

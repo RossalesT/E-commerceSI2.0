@@ -89,6 +89,7 @@ a {
     background-color: #DC2F02;
 }
 .item {
+    display: block;
     text-align: center;
     border: 8px solid black;
     border-radius: 10px;
@@ -115,6 +116,12 @@ a {
     padding-right: 5px;
     border-radius: 8px;
 }
+.nome-produto-modal {
+    height: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
 .avista {
     color: #fff;
     font-size: 20px;
@@ -125,6 +132,7 @@ a {
     font-weight: bold;
     font-size: 12px;
 }
+
 
 /* Itens oferta*/
 
@@ -451,7 +459,7 @@ a {
     width: 100%;
     height: 130px;
 }
-button{
+.button{
     cursor: pointer;
     background-color: #DC2F02;
     border-radius: 5px;
@@ -459,6 +467,18 @@ button{
     padding: 10px 20px;
 }
 button:hover{
+    background-color: #FFBA08;
+}
+.botao-link{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #df3400c6;
+    border-radius: 5px;
+    color: black;
+    padding: 15px;
+}
+.botao-link:hover{
     background-color: #FFBA08;
 }
 
@@ -474,4 +494,7 @@ button:hover{
 }
 .item .button:hover{
     background-color: #FFBA08;
+}
+.cart--link{
+    color: black;;
 }

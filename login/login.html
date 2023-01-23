@@ -24,12 +24,15 @@
 </body>
 
 <script>
-    var login = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
+
+    var login = document.getElementById("login");
+    var senha = document.getElementById("senha");
+
     function logar(){
-        if (login == "admin" && senha == "admin"){
+
+        if (login.value == "admin" && senha.value == "admin"){
             alert('Você logou.');
-            location.href("/foguinho-eletronicos.html")
+            window.location.href = "../index.html";
         }else{
           alert('nao deu')
         }
